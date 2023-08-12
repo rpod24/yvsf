@@ -4,60 +4,64 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .topnav {
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .topnav .hoverable:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* Create a right-aligned (split) link inside the navigation bar */
-        .topnav a.active {
-            background-color: #04AA6D;
-            color: white;
-        }
-
-        .topnav .split {
-            float: right;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="topnav">
-        <!-- <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about" class="split">Help</a> -->
-        <a class="icon" onclick=""><i class="fa fa-home"></i></a>
-        <a class="split hoverable" onclick="openPage('contact')">Contact</a>
-        <a class="split hoverable" onclick="openPage('events')">Events</a>
-        <a class="split hoverable" onclick="openPage('media')">Media</a>
-        <a class="split hoverable" onclick="openPage('about')">About</a>
-        <a class="split active" onclick="" id="defaultOpen">Home</a>
+        <img src="content/index.html/images/yvsf.png" class="homeIcon">
+        <a class="prevent-select split hoverable" onclick="openPage('contact')">Contact</a>
+        <a class="prevent-select split hoverable" onclick="openPage('events')">Events</a>
+        <a class="prevent-select split hoverable" onclick="openPage('media')">Media</a>
+        <a class="prevent-select split hoverable" onclick="openPage('about')">About</a>
+        <a class="prevent-select split active" onclick="" id="defaultOpen">Home</a>
     </div>
 
     <div id="Home" class="tabcontent">
-        <h3>Home</h3>
-        <p>Home is where the heart is..</p>
+        <header class="container">
+            <div class="crop">
+                <img src="/content/index.html/images/Background.jpeg" style="filter: brightness(50%);">
+            </div>
+            <div class="imageText">
+                <h1>
+                    Youth Voices for a Sober Future
+                </h1>
+                <p>Let's Make a Difference Together</p>
+            </div>
+        </header>
+        <!-- <h3>Home</h3>
+        <p>Home is where the heart is..</p> -->
+        <section class="section">
+            <h2>
+                Mission
+            </h2>
+            <div class="inset">
+                <p>
+                    At Youth Voices for a Sober Future, our mission is to lead the charge in preventing drunk driving
+                    and fostering a culture of responsibility among young people. We understand the devastating impact
+                    that drunk driving can have on families and communities, and we are determined to make a difference.
+                    Through innovative education, dynamic advocacy, and collaborative community engagement, we are
+                    empowering youth to take an active role in promoting safety and sobriety.
+                </p>
+            </div>
+        </section>
+
+        <section class="alternateBackground">
+            <div class="horizontalAlignment">
+                <column>
+                    <img src="content/index.html/images/imageNotFound.jpeg">
+                    <p>aboutThisImage</p>
+                </column>
+                <column>
+                    <img src="content/index.html/images/imageNotFound.jpeg">
+                    <p>aboutThisImage</p>
+                </column>
+                <column>
+                    <img src="content/index.html/images/imageNotFound.jpeg">
+                    <p>aboutThisImage</p>
+                </column>
+            </div>
+        </section>
     </div>
 
     <script>
@@ -73,7 +77,10 @@
             // }
             // document.getElementById(pageName).style.display = "block";
             // elmnt.classList.add("active");
-            location.replace(`https://rpodonnell.com/YVSF/${pageName.toLowerCase()}.html`);
+            //For dev:
+            location.replace(`http://127.0.0.1:3000/${pageName.toLowerCase()}.html`);
+            //TODO: Post Dev:
+            // location.replace(`https://rpodonnell.com/YVSF/${pageName.toLowerCase()}.html`);
         }
     </script>
 </body>
