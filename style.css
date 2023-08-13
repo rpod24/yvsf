@@ -7,6 +7,10 @@ body {
     overflow: hidden;
     background-color: #cc0100;
     height: 47.5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .topnav a {
@@ -79,8 +83,15 @@ section .inset{
     margin: 0% 0% 2.5% 0%;
 }
 
-column{
+.column{
     flex: 1;
+    display: grid;
+    text-align: center;
+}
+
+.column a{
+    flex: 1;
+    margin-top: 1.5%;
 }
 
 .horizontalAlignment{ 
@@ -96,4 +107,38 @@ column{
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-  }
+}
+
+footer{
+    background-color: #C8C8C9;
+}
+
+.horiziontal{
+    flex: 1;
+    display: flex;
+}
+
+.horiziontal a{
+    flex: 1;
+}
+
+footer{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.pageLink{
+    margin-top: 2%;
+    width: 100px;
+    height: 25px;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+button:hover{
+    background-color: grey;
+}
