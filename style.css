@@ -111,6 +111,39 @@ section .inset{
     display: flex;
 }
 
+.row{
+    margin: 0 0% 0 0%;
+    padding: 1% 0% 1% 0%;
+    display: flex;
+}
+
+.row img{
+    flex:1;
+    padding-right: 25px;
+    width: 300px;
+    height: fit-content;
+}
+
+.row column{
+    flex: 4;
+}
+
+.execTeam{
+    min-height: 250px;
+}
+
+.execTeam column h3{
+    font-weight: 400;
+    color: grey;
+}
+.execTeam column h2{
+    color: black;
+}
+
+.leftAlign{
+    text-align: left;
+}
+
 .alternateBackground{
     background-color: lightgray;
 }
@@ -137,8 +170,6 @@ footer{
 footer{
     padding-top: 1%;
     padding-bottom: 1%;
-    position: fixed;
-    bottom: 0;
 }
 
 .pageLink{
