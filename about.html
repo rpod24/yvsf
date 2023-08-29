@@ -10,6 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <link rel="stylesheet" href="slider.css">
 </head>
 
 <body>
@@ -180,45 +183,78 @@
             <h2 style="text-align: left; color: white; margin: 0;">Chapter Leaders</h2>
         </section>
         <section class="alternateBackground">
-            <row class="row team">
-                <img src="/content/about.html/images/RishiTumala.jpeg" class="center">
-                <column>
-                    <h2 id="name" class="leftAlign">
-                        Rishi Tumala
-                    </h2>
-                    <h3 id="role" class="leftAlign">
-                        President, St. Louis Chapter
-                    </h3>
-                    <p id="description" class="leftAlign">
-                        Rishi is a junior at Lafayette High School in St.Louis, Missouri. Rishi is passionate about
-                        giving back to his community. He volunteers for various organizations such as Friends of the
-                        Rainforest, Missouri Ganesha Temple, New Creation International and volunteered for a food drive
-                        for Afghan refugees. He loves sharing his knowledge with others and tutors at New Creation
-                        International and a teaching assistant at Bal Vihar. Rishi played for his school tennis team. He
-                        is a member of the National Honor Society and plays guitar.
-                    </p>
-                </column>
-            </row>
-            <row class="row team">
-                <img src="/content/about.html/images/VikramChandra.png" class="center">
-                <column>
-                    <h2 id="name" class="leftAlign">
-                        Vikram Chandra
-                    </h2>
-                    <h3 id="role" class="leftAlign">
-                        President, San Diego Chapter
-                    </h3>
-                    <p id="description" class="leftAlign">
-                        Vikram is a sophomore attending San Marcos High School, with a keen interest in Computer Science
-                        and Neural Networks. He enjoys applying his passion for these fields to his love for Astronomy
-                        by working on research projects, for which he received multiple regional and state awards. As an
-                        active member of the school’s robotics team where he works on developing software for the robot
-                        and mentors new members in Java programming. Along with his love for coding, Vikram enjoys
-                        playing the violin, indulging in astrophotography, biking, and playing badminton during his free
-                        time.
-                    </p>
-                </column>
-            </row>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+    
+                                <div class="card-image">
+                                    <img src="/content/about.html/images/RishiTumala.jpeg" alt=""
+                                        class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Rishi Tumala
+                                </h2>
+                                <h3>President, St. Louis Chapter</h3>
+                                <p class="description">Rishi is a junior at Lafayette High School in St.Louis, Missouri.
+                                    Rishi is passionate about giving back to his community. He volunteers for various
+                                    organizations such as Friends of the Rainforest, Missouri Ganesha Temple, New Creation
+                                    International and volunteered for a food drive for Afghan refugees. He loves sharing his
+                                    knowledge with others and tutors at New Creation International and a teaching assistant
+                                    at Bal Vihar. Rishi played for his school tennis team. He is a member of the National
+                                    Honor Society and plays guitar.</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+    
+                                <div class="card-image">
+                                    <img src="/content/about.html/images/VikramChandra.png" alt=""
+                                        class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">Vikram Chandra
+                                </h2>
+                                <h3>President, San Diego Chapter</h3>
+                                <p class="description">Vikram is a sophomore attending San Marcos High School, with a keen
+                                    interest in Computer Science and Neural Networks. He enjoys applying his passion for
+                                    these fields to his love for Astronomy by working on research projects, for which he
+                                    received multiple regional and state awards. As an active member of the school’s
+                                    robotics team where he works on developing software for the robot and mentors new
+                                    members in Java programming. Along with his love for coding, Vikram enjoys playing the
+                                    violin, indulging in astrophotography, biking, and playing badminton during his free
+                                    time.</p>
+                            </div>
+                        </div>
+    
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+    
+                                <div class="card-image">
+                                    <img src="" alt=""
+                                        class="card-img">
+                                </div>
+                            </div>
+    
+                            <div class="card-content">
+                                <h2 class="name">TBA
+                                </h2>
+                                <h3>President</h3>
+                                <p class="description">TBA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <section class="sectionTitle">
             <h2 style="text-align: left; color: white; margin: 0;">Board Of Directors</h2>
@@ -283,6 +319,8 @@
                 </column>
             </row>
         </section>
+
+        
         <footer>
             <horiziontal class="horiziontal">
                 <column class="column">
@@ -311,6 +349,42 @@
             </horiziontal>
         </footer>
     </div>
+
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+    <script>
+
+
+        var swiper = new Swiper(".slide-content", {
+            slidesPerView: 3,
+            spaceBetween: 25,
+            loop: true,
+            centerSlide: 'true',
+            fade: 'true',
+            grabCursor: 'true',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                520: {
+                    slidesPerView: 2,
+                },
+                950: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
 
     <script>
         function openPage(pageName) {
