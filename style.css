@@ -222,3 +222,14 @@ button:hover{
 height: fit-content;
 overflow: hidden;
 }
+
+.sponser{
+    padding-top: 5px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.linkedImg{
+    width: 44px;
+    height: 44px;
+}
