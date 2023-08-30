@@ -94,6 +94,14 @@ section h2{
     color: red;
 }
 
+section h3{
+    margin-top: 2%;
+}
+section h3:hover{
+    cursor: pointer;
+}
+
+
 section p{
     color: black;
 }
