@@ -18,7 +18,8 @@
             <img src="/content/index.html/images/yvsf.png" class="homeIcon">
             <a class="prevent-select" onclick="openPage('index')" id="defaultOpen">YVSF</a>
         </div>
-        <a class="prevent-select split hoverable" href="https://www.paypal.com/donate/?hosted_button_id=YTQJP5H5BQEHW">Donate</a>
+        <a class="prevent-select split hoverable"
+            href="https://www.paypal.com/donate/?hosted_button_id=YTQJP5H5BQEHW">Donate</a>
         <a class="prevent-select split hoverable" onclick="openPage('contact')">Contact</a>
         <a class="prevent-select split hoverable" onclick="openPage('events')">Events</a>
         <a class="prevent-select split hoverable" onclick="openPage('media')">Media</a>
@@ -40,9 +41,31 @@
         </header>
         <!-- <h3>Home</h3>
         <p>Home is where the heart is..</p> -->
-        <section class="section">
+        <style>
+        @keyframes slide-in {
+            from {opacity: 0; transform: translateY(50px);}
+            to {opacity: 1; transform: translateY(0px);}
+        }
+        .slide-in {
+          animation: slide-in 2s;
+        }
+
+        @keyframes slide-in-left {
+            from {opacity: 0; transform: translateX(-550px);}
+            to {opacity: 1; transform: translateX(0px);}
+        }
+        .slide-in-left {
+          animation: slide-in-left 2s;
+        }
+
+        .hidden{
+            opacity: 0;
+        }
+        </style>
+        <!-- <div style="height: 1000px;"></div> -->
+        <section class="section hidden slide-in">
             <h2>
-                Mission
+                Our Mission
             </h2>
             <div class="inset">
                 <p>
@@ -57,17 +80,17 @@
 
         <section class="alternateBackground">
             <div class="horizontalAlignment">
-                <column class="column">
+                <column class="column hidden slide-in-left" >
                     <img src="/content/index.html/images/yvsf.png" class="center imageLink">
-                    <h3 onclick="openPage('about')"><u>About Us</u></h3 >
+                    <h3 onclick="openPage('about')"><u>About Us</u></h3>
                 </column>
-                <column class="column">
+                <column class="column hidden slide-in-left">
                     <img src="/content/index.html/images/media.jpg" class="center imageLink">
-                    <h3 onclick="openPage('events')"><u>Past Events</u></h3 >
+                    <h3 onclick="openPage('events')"><u>Past Events</u></h3>
                 </column>
-                <column class="column">
+                <column class="column hidden slide-in-left">
                     <img src="/content/index.html/images/imageNotFound.jpeg" class="center imageLink">
-                    <h3 onclick="openPage('index')"><u>AboutThisImage</u></h3 >
+                    <h3 onclick="openPage('index')"><u>AboutThisImage</u></h3>
                 </column>
             </div>
         </section>
@@ -95,15 +118,49 @@
                         <div><button class="pageLink" onclick="openPage('about')">Contact</button></div>
                         <div><button class="pageLink" onclick="openPage('about')">Donate</button></div>
                         <row style="flex: 1;">
-                            <a href="http://www.google.com/url?q=http%3A%2F%2Ffacebook.com&sa=D&sntz=1&usg=AOvVaw3BCkRzU9i5zG3x7h_Z9aAv"><img src="/content/index.html/images/facebook.png" class="linkedImg"></a>
-                            <a href="http://www.google.com/url?q=http%3A%2F%2Ftwitter.com&sa=D&sntz=1&usg=AOvVaw1AY-RzXps0l7kS4XYKZzQm"><img src="/content/index.html/images/twitter.png" class="linkedImg"></a>
-                            <a href="http://www.google.com/url?q=http%3A%2F%2Flinkedin.com&sa=D&sntz=1&usg=AOvVaw2NkP2uL_If7dVQdwqcOvW8"><img src="/content/index.html/images/linkedin.png" class="linkedImg"></a>
+                            <a
+                                href="http://www.google.com/url?q=http%3A%2F%2Ffacebook.com&sa=D&sntz=1&usg=AOvVaw3BCkRzU9i5zG3x7h_Z9aAv"><img
+                                    src="/content/index.html/images/facebook.png" class="linkedImg"></a>
+                            <a
+                                href="http://www.google.com/url?q=http%3A%2F%2Ftwitter.com&sa=D&sntz=1&usg=AOvVaw1AY-RzXps0l7kS4XYKZzQm"><img
+                                    src="/content/index.html/images/twitter.png" class="linkedImg"></a>
+                            <a
+                                href="http://www.google.com/url?q=http%3A%2F%2Flinkedin.com&sa=D&sntz=1&usg=AOvVaw2NkP2uL_If7dVQdwqcOvW8"><img
+                                    src="/content/index.html/images/linkedin.png" class="linkedImg"></a>
                         </row>
                     </column>
                 </horiziontal>
             </horiziontal>
         </footer>
     </div>
+    <script>(function() {
+        var elements;
+        var windowHeight;
+      
+        function init() {
+          elements = document.querySelectorAll('.hidden');
+          windowHeight = window.innerHeight;
+        }
+      
+        function checkPosition() {
+          for (var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+            var positionFromTop = elements[i].getBoundingClientRect().top;
+      
+            if (positionFromTop - windowHeight <= 0) {
+              element.classList.add('slide-in-element');
+              element.classList.remove('hidden');
+            }
+          }
+        }
+      
+        window.addEventListener('scroll', checkPosition);
+        window.addEventListener('resize', init);
+      
+        init();
+        checkPosition();
+      })();
+    </script>
 
     <script>
         function openPage(pageName) {
