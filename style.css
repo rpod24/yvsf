@@ -242,3 +242,256 @@ overflow: hidden;
     height: 300px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #cc0100;
+    height: 47.5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 11px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav .hoverable:hover {
+    background-color: #C8C8C9;
+    color: black;
+    cursor: pointer;
+}
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.active {
+    background-color: #cc0100;
+    color: black;
+}
+
+.topnav .split {
+    float: right;
+}
+
+.imageText {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    transform: translate(-45%, -65%);
+    text-align: left;
+}
+
+.homeIcon{
+    width: 37.5px;
+    height: 37.5px;
+    margin: 5px;
+}
+
+.homeIcon:hover{
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+h1{
+    font-size: 40px;
+}
+
+.crop{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.crop img{
+    margin: -500px 0 0 0;
+    width: 100%;
+}
+
+
+section{
+    padding: 1.5% 20% 0% 20%;
+    text-align: center;
+}
+
+.sectionTitle{
+    padding: 1.5% 20% 1.5% 20%;
+    text-align: center;
+    background-color: #7A1414;
+}
+
+section h2{
+    margin-top: 0%;
+    color: red;
+}
+
+section h3{
+    margin-top: 2%;
+}
+section h3:hover{
+    cursor: pointer;
+}
+
+
+section p{
+    color: black;
+}
+
+section .inset{
+    margin: 0% 0% 2.5% 0%;
+}
+
+.column{
+    flex: 1;
+    display: grid;
+    text-align: center;
+}
+
+.column a{
+    flex: 1;
+    margin-top: 1.5%;
+}
+
+.horizontalAlignment{ 
+    margin: 0 0% 0 0%;
+    display: flex;
+}
+
+.row{
+    margin: 0 0% 0 0%;
+    padding: 1% 0% 1% 0%;
+    display: flex;
+}
+
+.row img{
+    flex:1;
+    padding-right: 25px;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height: fit-content;
+}
+
+.row column{
+    flex: 4;
+}
+
+.team{
+    min-height: 250px;
+}
+
+.team column h3{
+    font-weight: 400;
+    color: grey;
+}
+.team column h2{
+    color: black;
+}
+
+.leftAlign{
+    text-align: left;
+}
+
+.alternateBackground{
+    background-color: lightgray;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+footer{
+    background-color: #C8C8C9;
+}
+
+.horiziontal{
+    flex: 1;
+    display: flex;
+}
+
+.horiziontal a{
+    flex: 1;
+}
+
+footer{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.pageLink{
+    margin-top: 2%;
+    width: 100px;
+    height: 25px;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+button:hover{
+    background-color: grey;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eventImage{
+    overflow: hidden;
+    height: 300px;
+    padding-bottom: 15px;
+}
+
+.eventImage img{
+    width: 500px;
+height: fit-content;
+overflow: hidden;
+}
+
+.sponser{
+    padding-top: 5px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.linkedImg{
+    width: 44px;
+    height: 44px;
+}
