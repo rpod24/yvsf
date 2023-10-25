@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 
-.slide-container{
+.swiper1{
     max-width: 1120px;
     width: 100%;
     padding: 40px 0;
   }
-  .slide-content{
+  .slide-content1{
     margin: 0 40px;
     overflow: hidden;
     border-radius: 25px;
@@ -122,10 +122,140 @@
   }
   
   @media screen and (max-width: 768px) {
-    .slide-content{
+    .slide-content1{
       margin: 0 10px;
     }
     .swiper-navBtn{
       display: none;
     }
   }
+
+
+  .swiper2{
+      max-width: 1120px;
+      width: 100%;
+      padding: 40px 0;
+    }
+    .slide-content2{
+      margin: 0 40px;
+      overflow: hidden;
+      border-radius: 25px;
+    }
+    .card2{
+      border-radius: 25px;
+      background-color: #a0a0a0;
+    }
+    .image-content2,
+    .card-content2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 14px;
+    }
+    .image-content2{
+      position: relative;
+      row-gap: 5px;
+      padding: 25px 0;
+    }
+    .overlay2{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #4070F4;
+      border-radius: 25px 25px 0 25px;
+    }
+    .overlay2::before,
+    .overlay2::after{
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      height: 40px;
+      width: 40px;
+      background-color: #4070F4;
+    }
+    .overlay2::after{
+      border-radius: 0 25px 0 0;
+      background-color: #FFF;
+    }
+    .card-image2{
+      position: relative;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background: #FFF;
+      padding: 3px;
+    }
+    .card-image2 .card-img2{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .name2{
+      font-size: 18px;
+      font-weight: 800;
+      color: #333;
+      margin: 0;
+    }
+    h3 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #333;
+      margin: 0;
+    }
+    .description2{
+      font-size: 14px;
+      color: #000;
+      text-align: center;
+    }
+    .button2{
+      border: none;
+      font-size: 16px;
+      color: #FFF;
+      padding: 8px 16px;
+      background-color: #4070F4;
+      border-radius: 6px;
+      margin: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button2:hover{
+      background: #265DF2;
+    }
+    
+    .swiper-navBtn2{
+      color: #6E93f7;
+      transition: color 0.3s ease;
+    }
+    .swiper-navBtn2:hover{
+      color: #4070F4;
+    }
+    .swiper-navBtn2::before,
+    .swiper-navBtn2::after{
+      font-size: 35px;
+    }
+    .swiper-button-next2{
+      right: 0;
+    }
+    .swiper-button-prev2{
+      left: 0;
+    }
+    .swiper-pagination-bullet2{
+      background-color: #6E93f7;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active2{
+      background-color: #4070F4;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .slide-content2{
+        margin: 0 10px;
+      }
+      .swiper-navBtn2{
+        display: none;
+      }
+    }
