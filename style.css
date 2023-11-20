@@ -495,3 +495,11 @@ overflow: hidden;
     width: 44px;
     height: 44px;
 }
+
+.shopButton{
+    width: 15%; height: 20%; font-size: larger; background-color: #DDDDDD;
+}
+.shopButton:hover{
+    background-color: #C8C8C9;
+    cursor: pointer;
+}
