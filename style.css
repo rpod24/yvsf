@@ -498,6 +498,7 @@ overflow: hidden;
 
 .shopButton{
     width: 15%; height: 20%; font-size: larger; background-color: #DDDDDD;
+    padding-top: 2.5px; padding-bottom: 3.5px;
 }
 .shopButton:hover{
     background-color: #C8C8C9;
